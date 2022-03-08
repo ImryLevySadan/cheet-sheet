@@ -1,0 +1,30 @@
+Build Kubctl access to private cluster:
+1. gcloud compute --project {{projectId}} ssh bastion --zone {{Zone}}-- -L {{port number}}:localhost:{{port number}} -N
+
+2. gcloud --project {{projectId}} container clusters get-credentials {{clusterName}} --region {{region}}
+
+3. vim ~/.kube/config
+
+
+Add proxy-url above the server property:
+4. proxy-url: {{http://localhost:8888}} - Same port as above
+
+Get daemonsets:
+kubectl get daemonsets.app --all-namespaces
+
+Get Pods:
+kubectl get pods --all-namespaces
+kubectl get pods -A
+
+get namespaces
+get svc --all-namespaces
+
+Describe pod
+k describe pod {{podName}} --namespace {{nameSpace name}}
+(can be find with Get daemonsets)
+
+
+
+
+
+
