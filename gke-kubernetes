@@ -17,7 +17,7 @@ kubectl get pods --all-namespaces
 kubectl get pods -A
 
 get namespaces
-get svc --all-namespaces
+kubectl svc --all-namespaces
 
 Describe pod
 k describe pod {{podName}} --namespace {{nameSpace name}}
