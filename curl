@@ -1,0 +1,7 @@
+
+
+tls handshake with resolving:
+curl -vik --resolve {{hostname}}:{{port}}:{{ip}} https://{{hostname}}
+
+tls handshake on app level:
+curl  --cacert {{crt file name}}.crt  -v https://{{ip}}-H 'Host: {{hostname}}'
