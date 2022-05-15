@@ -1,0 +1,3 @@
+1. Add ports to tcp LB service - https://cloud.google.com/load-balancing/docs/internal/multiple-forwarding-rules-same-ip
+2. Create gateway for each port. Each service will have listener to to a different LB port
+3. Add redirect mechanism with httpRoute - https://gateway-api.sigs.k8s.io/v1alpha2/references/spec/#gateway.networking.k8s.io/v1alpha2.HTTPRouteRule
