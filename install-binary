@@ -1,0 +1,3 @@
+sudo cp bin/{{folderName}} /usr/local/bin/
+sudo chown root:root /usr/local/bin/{{folderName}}
+sudo chmod 755 /usr/local/bin/{{folderName}}
