@@ -1,0 +1,2 @@
+Remove all filed managers in case of conflict between terraform and kubectl
+k patch {{resourceType}} {{resourceName}} --type json -p '[{"op": "remove", "path": "/metadata/managedFields/1"}]'
