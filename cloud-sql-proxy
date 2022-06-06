@@ -1,0 +1,14 @@
+SQL Proxy:
+install:
+option a:
+gcloud components install cloud_sql_proxy
+
+option b:
+wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
+sudo mv cloud_sql_proxy /usr/bin/
+sudo chown root:root cloud_sql_proxy
+chmod +x cloud_sql_proxy
+
+Usage
+cloud_sql_proxy -instances=zeekit-dev:us-central1:dev-2205092129=tcp:3306
+cloud_sql_proxy -instances={{Instance name}}:{{zone}}:{{gcloud sql instances list }}=tcp:{{port}}

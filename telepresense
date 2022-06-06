@@ -1,0 +1,29 @@
+Install:
+
+Latest:
+sudo curl -fL https://app.getambassador.io/download/tel2/linux/amd64/latest/telepresence -o /usr/local/bin/telepresence
+
+Istio compatibale version:
+sudo curl -fL https://app.getambassador.io/download/tel2/linux/amd64/2.5.8/telepresence -o /usr/local/bin/telepresence
+
+sudo chmod a+x /usr/local/bin/telepresence
+
+===============================================================================
+
+Usage:
+1. telepresence connect
+2. telepresence list  - see all the current deployments
+3. telepresence intercept {{deployment name}} --port {{localport}} --env-file={{location of env file that telepresence will generate from the intercepted deployment}}
+4. run the app with pointer to the env file that was generated in last command
+
+===============================================================================
+
+GOTHCA:
+If an intercepted service is running with another service outside the VPC (e.g., mySql), we need to port forward traffic from inside the cluster
+to the outside world - using port forward (to the pod)
+
+===============================================================================
+
+
+
+

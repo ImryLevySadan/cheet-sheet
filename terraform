@@ -1,0 +1,6 @@
+How to handle "Error: Error acquiring the state lock"
+
+cdktf synth
+Go to directory of cdktfout/stack...
+terraform init
+terraform --force-unlock <lock id>
